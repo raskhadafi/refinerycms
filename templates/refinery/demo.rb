@@ -49,7 +49,7 @@ run 'bundle install'
 rake 'db:create'
 generate "refinery:cms --fresh-installation #{ARGV.join(' ')}"
 
-run ' generate refinery:blog'
+run 'rails generate refinery:blog'
 run 'rails generate refinery:inquiries'
 run 'rails generate refinery:news'
 run 'rails generate refinery:page_images'
