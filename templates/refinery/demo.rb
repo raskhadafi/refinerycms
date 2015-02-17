@@ -60,6 +60,8 @@ run 'rails generate refinery:search'
 rake 'db:migrate'
 rake 'db:seed'
 
+run "bin/rails runner \"Refinery::User.new(:username => 'demo', :password => 'demo', :email => 'demo@example.org').create_first\""
+
 say <<-SAY
   ============================================================================
     Your new Refinery CMS application is now running on edge and mounted to /.
